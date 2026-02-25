@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-primary: #10b981; /* emerald-500 */
+  --color-primary-dark: #059669; /* emerald-600 */
+  --color-secondary: #0f172a; /* slate-900 */
+  --color-accent: #f59e0b; /* amber-500 */
+  
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#fcfcfc] text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  
+  .dark-glass {
+    @apply bg-slate-900/80 backdrop-blur-xl border border-slate-800/50;
+  }
+
+  .btn-primary {
+    @apply bg-emerald-600 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/20 active:scale-95 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all active:scale-95 flex items-center gap-2;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-24 md:py-32;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-emerald-500/5 transition-all duration-500;
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600;
+}
+
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+}

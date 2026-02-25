@@ -1,0 +1,5 @@
+{
+  "name": "SkyThernEnergy",
+  "description": "Pan-African Renewable Energy & Smart Power Solutions. 24/7 reliable, affordable, and sustainable electricity powered by AI.",
+  "requestFramePermissions": ["geolocation"]
+}
